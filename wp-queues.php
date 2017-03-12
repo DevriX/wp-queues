@@ -1,5 +1,13 @@
 <?php
 
+/**
+  * WP Queues
+  *
+  * Run queues and background jobs and tasks in WordPress
+  *
+  * @link github.com/elhardoum/wp-queues
+  * @version 1.0
+  */
 class WP_Queues
 {
     /**

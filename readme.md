@@ -75,6 +75,5 @@ add_filter('wp_queues_event_patterns', function($patterns){
 
 
 <em>
-	**Todo:**<br/>
-	<input type="checkbox" disabled="disabled" /> more documentation
+	**Todo:** more documentation
 </em>
