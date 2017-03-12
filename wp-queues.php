@@ -63,7 +63,6 @@ class WP_Queues
       * You must hook this method to an early hook
       * like plugins_loaded or init
       */
-
     public function init()
     {
         add_filter('cron_schedules', array($this, 'pushCronInterval'));
@@ -79,7 +78,6 @@ class WP_Queues
       * @param $identifier a name for the event
       * @param $seconds optional, run event after x seconds, default $this->after_seconds
       */
-
     public function schedule($identifier, $seconds=null)
     {
         $i = rand($this->rand_min, $this->rand_max);
@@ -107,7 +105,6 @@ class WP_Queues
     /**
       * Add custom interval to cron schedules
       */
-
     function pushCronInterval($vals)
     {
         return array_merge(array(
@@ -195,7 +192,6 @@ class WP_Queues
       * 
       * This process is a must.
       */
-
     public function deactivation()
     {
         foreach ( range($this->rand_min, $this->rand_max) as $i ) {
@@ -209,7 +205,6 @@ class WP_Queues
       *
       * @return number of deleted options
       */
-
     public function cleanup()
     {
         global $wpdb;
