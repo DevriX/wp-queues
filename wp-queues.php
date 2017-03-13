@@ -91,12 +91,12 @@ class WP_Queues
         $i = rand($this->rand_min, $this->rand_max);
         $tag = "wp_queues_{$this->unique}_schedules_{$i}";
 
-        if ( !intval($seconds) ) {
+        if ( !is_numeric($seconds) ) {
             $seconds = $this->after_seconds;
         }
 
         if( !wp_next_scheduled( $tag ) ) {
-            wp_schedule_event( time() + $seconds, 'wp_queues_interval', $tag );  
+            wp_schedule_event( time() + intval($seconds), 'wp_queues_interval', $tag );  
         }
 
         $opt = "wp_queues_{$this->unique}_schedules_{$i}";
