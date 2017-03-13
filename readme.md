@@ -37,6 +37,10 @@ Here's how WP_Queues works:
 2. Requires you to give a name for this event (e.g `welcome_users_1,2`)
 3. While events are executed, it will match your event name with the available regex patterns in order to find the correct callback to process your event.
 
+```php
+$WP_Queues->schedule($event_name, $after_seconds=null);
+```
+
 Here's a sample case: I want to notify a user, who's id is 1.
 
 ```php
